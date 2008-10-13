@@ -141,7 +141,7 @@ int main( int argc, char *argv[] )
 		flags.quiet = false;
 
 	if( flags.amarok )
-		findAmarokFiles( "/home/yanos/.kde/share/apps/amarok/albumcovers/large/" );
+		findAmarokFiles( string( getenv("HOME") ) + string( ".kde/share/apps/amarok/albumcovers/large/" ) );
 	
 	int nbTracks = allTracks.size();
 	
@@ -327,6 +327,10 @@ void findAmarokFiles( const string _amarokPath )
 						
 			strncpy( filePath, _amarokPath.c_str(), 1024 );
 		}
+	}
+	else
+	{
+		if( !flags.quiet ) cout << "could not open amazon directory: " << _amarokPath << endl; 
 	}
 	
 	closedir( dirDescriptor );
