@@ -330,7 +330,7 @@ void findAmarokFiles( const string _amarokPath )
 	}
 	else
 	{
-		if( !flags.quiet ) cout << "could not open amazon directory: " << _amarokPath << endl; 
+		if( !flags.quiet ) cout << "could not open amarok directory: " << _amarokPath << endl; 
 	}
 	
 	closedir( dirDescriptor );
