@@ -10,9 +10,9 @@ arch=("i686" "x86_64")
 depends=("taglib" "openssl")
 source=('COPYING' 'covertagger.cpp' 'Makefile' 'README')
 md5sums=('d32239bcb673463ab874e80d47fae504'
-         '95125aba32c1030fa795f2c410657f28'
+         '7bcb2b349fc70127573fdf41fcf25324'
          '44284258d426b386e0d2c99cf7dc1a3a'
-         'f2ec582b2b2bdafde94ab775e931814f')
+         'ca9dfb7d549bea5d345922e8df759bf8')
 
 build() {
 	cd $srcdir

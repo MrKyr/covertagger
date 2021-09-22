@@ -312,7 +312,7 @@ void findAmarokFiles( const string _amarokPath )
 		// Loop through directory entries.
 		while( ( dp = readdir( dirDescriptor ) ) != NULL )
 		{
-			stat( strncat( filePath, dp->d_name, 1024 ), &statbuf );
+			stat( strncat( filePath, dp->d_name, 1023 ), &statbuf );
 			if( !S_ISDIR( statbuf.st_mode ) )
 			{
 				if( strcmp( dp->d_name, "." ) != 0 && strcmp( dp->d_name, ".." ) != 0 )
@@ -351,7 +351,7 @@ void readDir( const string _dirPath )
 		// Loop through directory entries.
 		while( ( dp = readdir( dirDescriptor ) ) != NULL )
 		{
-			stat( strncat( filePath, dp->d_name, 1024 ), &statbuf );
+			stat( strncat( filePath, dp->d_name, 1023 ), &statbuf );
 			if( S_ISDIR( statbuf.st_mode ) )
 			{
 				// it's a dir other than . and .. -> recurse
