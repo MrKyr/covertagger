@@ -15,6 +15,7 @@
 #include <md5.h>
 #include <iostream>
 #include <string>
+#include <string.h>
 #include <vector>
 #include <fstream>
 #include <mpegfile.h>
