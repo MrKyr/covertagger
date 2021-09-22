@@ -71,3 +71,7 @@ BUGS
 CHANGELOG
 1.0 (13.10.2008)
   - initial release
+
+1.0.1 (22.9.2021)
+  - Fixed 'Makefile' to build on macOS
+  - Added brew formula 'covertagger.rb'
