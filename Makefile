@@ -6,3 +6,13 @@ all:
 dist:
 	tar -c covertagger.cpp Makefile README COPYING > covertagger-$(VERSION).tar
 	gzip covertagger-$(VERSION).tar
+
+clean:
+	rm -r covertagger
+
+install:
+	install -d $(DESTDIR)/usr/local/bin/
+	install -m 755 covertagger $(DESTDIR)/usr/local/bin/
+
+uninstall:
+	rm /usr/local/bin/covertagger
